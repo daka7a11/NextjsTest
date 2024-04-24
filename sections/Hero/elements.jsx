@@ -4,7 +4,9 @@ import {
   SectionBigHeading,
   SectionSubheading,
   ContentContainer,
+  Card,
 } from "~/components";
+import { SelectionItemContainer } from "../../components/Containers/SelectionItemsContainer/SelectionItemContainer";
 
 export const StyledSectionContainer = styled(
   ({ backgroundImageUrl, height, ...props }) => <SectionContainer {...props} />
@@ -31,6 +33,7 @@ export const StyledContentContainer = styled(({ ...props }) => (
   background-color: blue;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 3rem;
 
   padding: 0.2rem;
 `;
@@ -51,13 +54,22 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   margin-bottom: 3rem;
 `;
 
-// export const StyledCTAContainer = styled(({ ...props }) => <div {...props} />)`
-//   display: flex;
-// `;
-
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
 ))`
   width: 100%;
   height: 100%;
+`;
+
+export const StyledCard = styled(({ ...props }) => <Card {...props} />)``;
+
+export const StyledSelectionItemContainer = styled(
+  ({ selectionItems, ...props }) => (
+    <SelectionItemContainer selectionItems={selectionItems} {...props} />
+  )
+)`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
 `;
