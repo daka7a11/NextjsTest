@@ -10,21 +10,12 @@ import {
   StyledImageContainer,
   StyledCard,
   StyledSelectionItemContainer,
+  StyledSectionSubheading,
+  StyledSectionParagraph,
+  StyledIconContainer,
+  StyledCardTextContainer,
+  Highlight,
 } from "./elements";
-
-const selectionItems = [
-  {
-    icon: "https://static.wixstatic.com/media/6b881a_f893694de3864336a089dd5b4c7b2d6b~mv2.png/v1/fill/w_319,h_319,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/noun_design_2123403.png",
-    title: "Brief",
-    description:
-      "Complete brief writing or simple guidance on what to include, we've got you covered.",
-  },
-  {
-    icon: "icon2",
-    title: "title2",
-    description: "description2",
-  },
-];
 
 export const Hero = ({ image, title, description, ctaText, ...props }) => {
   return (
@@ -44,19 +35,54 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
               objectFit="cover"
             />
           </StyledImageContainer>
-          <StyledSelectionItemContainer selectionItems={selectionItems}>
-            {selectionItems.map((item, i) => {
-              const widthPercentage = `(${
-                (selectionItems.length - 1 - i) * 5 - 100
-              })%`;
-              return (
-                <StyledCard
-                  key={item.title}
-                  width={widthPercentage}
-                  item={item}
-                />
-              );
-            })}
+          <StyledSelectionItemContainer>
+            <StyledCard width="90%">
+              <StyledIconContainer>
+                <ion-icon
+                  style={{ width: "40px", height: "40px" }}
+                  name="construct-outline"
+                ></ion-icon>
+              </StyledIconContainer>
+              <StyledCardTextContainer>
+                <StyledSectionSubheading>Brief</StyledSectionSubheading>
+                <StyledSectionParagraph>
+                  Complete
+                  <Highlight> brief writing or simple guidance</Highlight> on
+                  what to include, we&apos;ve got you covered.
+                </StyledSectionParagraph>
+              </StyledCardTextContainer>
+            </StyledCard>
+            <StyledCard width="95%">
+              <StyledIconContainer>
+                <ion-icon
+                  style={{ width: "40px", height: "40px" }}
+                  name="search-outline"
+                ></ion-icon>
+              </StyledIconContainer>
+              <StyledCardTextContainer>
+                <StyledSectionSubheading>Search</StyledSectionSubheading>
+                <StyledSectionParagraph>
+                  In-depth agency search covering;{" "}
+                  <Highlight>criteria matching</Highlight>, door knocking and
+                  due-dilligence vetting.
+                </StyledSectionParagraph>
+              </StyledCardTextContainer>
+            </StyledCard>
+            <StyledCard>
+              <StyledIconContainer>
+                <ion-icon
+                  style={{ width: "40px", height: "40px" }}
+                  name="chatbubbles-outline"
+                ></ion-icon>
+              </StyledIconContainer>
+              <StyledCardTextContainer>
+                <StyledSectionSubheading>Pitch</StyledSectionSubheading>
+                <StyledSectionParagraph>
+                  Comprehesive <Highlight>pitch management</Highlight>,
+                  including comms, diary management and pitch hosting.
+                </StyledSectionParagraph>
+              </StyledCardTextContainer>
+            </StyledCard>
           </StyledSelectionItemContainer>
         </StyledContentContainer>
       </StyledContainer>

@@ -1,5 +1,6 @@
 import { Hero } from "../sections";
 import Head from "next/head";
+import Script from "next/script";
 
 const heroProps = {
   backgroundImageUrl: "/img/background.png",
@@ -21,6 +22,14 @@ export default function Home() {
         />
       </Head>
       <Hero {...heroProps} />
+      <Script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></Script>
+      <Script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></Script>
       {/** Other sections */}
     </>
   );
