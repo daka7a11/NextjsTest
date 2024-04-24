@@ -79,8 +79,22 @@ export const StyledSelectionItemContainer = styled(
 `;
 
 export const StyledCard = styled(({ ...props }) => <Card {...props} />)`
-  width: ${(props) => (props.width ? props.width : "auto")};
+  width: ${(props) => (props.width ? props.width : "100%")};
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : ""};
   overflow: hidden;
+  border-radius: 5px;
+
+  &:hover {
+    border: 2px solid #1378fc;
+    cursor: pointer;
+  }
+
+  &:hover .subheading {
+    text-decoration: underline;
+    text-decoration-color: #1378fc;
+    color: #1378fc;
+  }
 `;
 
 export const StyledSectionSubheading = styled(({ ...props }) => (

@@ -36,7 +36,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
             />
           </StyledImageContainer>
           <StyledSelectionItemContainer>
-            <StyledCard width="90%">
+            <StyledCard width="90%" backgroundColor="#f9f9f9">
               <StyledIconContainer>
                 <ion-icon
                   style={{ width: "40px", height: "40px" }}
@@ -44,7 +44,9 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 ></ion-icon>
               </StyledIconContainer>
               <StyledCardTextContainer>
-                <StyledSectionSubheading>Brief</StyledSectionSubheading>
+                <StyledSectionSubheading className="subheading">
+                  Brief
+                </StyledSectionSubheading>
                 <StyledSectionParagraph>
                   Complete
                   <Highlight> brief writing or simple guidance</Highlight> on
@@ -52,7 +54,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 </StyledSectionParagraph>
               </StyledCardTextContainer>
             </StyledCard>
-            <StyledCard width="95%">
+            <StyledCard width="95%" backgroundColor="#f4f4f4">
               <StyledIconContainer>
                 <ion-icon
                   style={{ width: "40px", height: "40px" }}
@@ -60,7 +62,9 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 ></ion-icon>
               </StyledIconContainer>
               <StyledCardTextContainer>
-                <StyledSectionSubheading>Search</StyledSectionSubheading>
+                <StyledSectionSubheading className="subheading">
+                  Search
+                </StyledSectionSubheading>
                 <StyledSectionParagraph>
                   In-depth agency search covering;{" "}
                   <Highlight>criteria matching</Highlight>, door knocking and
@@ -68,7 +72,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 </StyledSectionParagraph>
               </StyledCardTextContainer>
             </StyledCard>
-            <StyledCard>
+            <StyledCard backgroundColor="#f1f1f1">
               <StyledIconContainer>
                 <ion-icon
                   style={{ width: "40px", height: "40px" }}
@@ -76,7 +80,9 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 ></ion-icon>
               </StyledIconContainer>
               <StyledCardTextContainer>
-                <StyledSectionSubheading>Pitch</StyledSectionSubheading>
+                <StyledSectionSubheading className="subheading">
+                  Pitch
+                </StyledSectionSubheading>
                 <StyledSectionParagraph>
                   Comprehesive <Highlight>pitch management</Highlight>,
                   including comms, diary management and pitch hosting.
