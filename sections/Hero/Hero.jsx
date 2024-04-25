@@ -32,7 +32,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              objectFit="cover"
+              objectFit="fill"
             />
           </StyledImageContainer>
           <StyledSelectionItemContainer>

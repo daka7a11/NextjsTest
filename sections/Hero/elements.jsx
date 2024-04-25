@@ -26,6 +26,10 @@ export const StyledContainer = styled(
 )`
   width: 65%;
   margin: 5rem auto;
+
+  @media only screen and (max-width: 1024px) {
+    width: 90%;
+  }
 `;
 
 export const StyledContentContainer = styled(({ ...props }) => (
@@ -36,16 +40,29 @@ export const StyledContentContainer = styled(({ ...props }) => (
   gap: 3rem;
 
   padding: 0.2rem;
+
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   margin: 0;
   color: black;
+
+  @media only screen and (max-width: 600px) {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
 `;
 
 export const StyledDescription = styled((props) => (
   <SectionSubheading {...props} />
-))``;
+))`
+  @media only screen and (max-width: 600px) {
+    font-size: 0.9rem;
+  }
+`;
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   color: black;
@@ -62,6 +79,20 @@ export const StyledImageContainer = styled(({ ...props }) => (
   border-radius: 6px;
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
+
+  transition: ease all 0.3s;
+
+  @media only screen and (max-width: 1024px) {
+    width: 40%;
+    justify-self: center;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 60%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 70%;
+  }
 `;
 
 export const StyledSelectionItemContainer = styled(
@@ -83,7 +114,10 @@ export const StyledCard = styled(({ ...props }) => <Card {...props} />)`
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : ""};
   overflow: hidden;
+  border: 2px solid transparent;
   border-radius: 5px;
+
+  min-height: 6rem;
 
   &:hover {
     border: 2px solid #1378fc;
@@ -103,6 +137,10 @@ export const StyledSectionSubheading = styled(({ ...props }) => (
   font-weight: 600;
   line-height: 0;
   margin: 0;
+
+  @media only screen and (max-width: 470px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledSectionParagraph = styled(({ ...props }) => (
@@ -111,6 +149,10 @@ export const StyledSectionParagraph = styled(({ ...props }) => (
   margin: 0;
   line-height: 1.3rem;
   font-size: 0.9rem;
+  @media only screen and (max-width: 470px) {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
 `;
 
 export const StyledIconContainer = styled(({ ...props }) => <div {...props} />)`

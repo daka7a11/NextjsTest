@@ -1,5 +1,5 @@
 import { StyledCard } from "./elements";
 
-export const Card = ({ item, ...props }) => {
+export const Card = ({ ...props }) => {
   return <StyledCard {...props} />;
 };
