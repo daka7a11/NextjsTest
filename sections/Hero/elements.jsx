@@ -10,7 +10,7 @@ import {
 import { SelectionItemContainer } from "../../components/Containers/SelectionItemsContainer/SelectionItemContainer";
 
 export const StyledSectionContainer = styled(
-  ({ backgroundImageUrl, height, ...props }) => <SectionContainer {...props} />
+  ({ backgroundImageUrl, ...props }) => <SectionContainer {...props} />
 )`
   margin: 0;
   padding: 0;
@@ -21,9 +21,7 @@ export const StyledSectionContainer = styled(
   background-position: center;
 `;
 
-export const StyledContainer = styled(
-  ({ backgroundImageUrl, height, ...props }) => <div {...props} />
-)`
+export const StyledContainer = styled(({ ...props }) => <div {...props} />)`
   width: 65%;
   margin: 5rem auto;
 
@@ -46,7 +44,9 @@ export const StyledContentContainer = styled(({ ...props }) => (
   }
 `;
 
-export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
+export const StyledTitle = styled(({ ...props }) => (
+  <SectionBigHeading {...props} />
+))`
   margin: 0;
   color: black;
 
@@ -56,7 +56,7 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   }
 `;
 
-export const StyledDescription = styled((props) => (
+export const StyledDescription = styled(({ ...props }) => (
   <SectionSubheading {...props} />
 ))`
   @media only screen and (max-width: 600px) {
@@ -95,11 +95,9 @@ export const StyledImageContainer = styled(({ ...props }) => (
   }
 `;
 
-export const StyledSelectionItemContainer = styled(
-  ({ selectionItems, ...props }) => (
-    <SelectionItemContainer selectionItems={selectionItems} {...props} />
-  )
-)`
+export const StyledSelectionItemContainer = styled(({ ...props }) => (
+  <SelectionItemContainer {...props} />
+))`
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   width: 100%;
@@ -111,8 +109,7 @@ export const StyledSelectionItemContainer = styled(
 
 export const StyledCard = styled(({ ...props }) => <Card {...props} />)`
   width: ${(props) => (props.width ? props.width : "100%")};
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : ""};
+  background-color: ${(props) => (props.bgcolor ? props.bgcolor : "")};
   overflow: hidden;
   border: 2px solid transparent;
   border-radius: 5px;

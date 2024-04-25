@@ -7,7 +7,6 @@ const heroProps = {
   image: { src: "/img/video.png", alt: "", width: 800, height: 1400 },
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
-  ctaText: "Start",
 };
 
 export default function Home() {

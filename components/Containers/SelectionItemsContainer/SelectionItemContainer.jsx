@@ -1,6 +1,6 @@
 import { StyledSelectionItemContainer } from "./elements";
 
-export const SelectionItemContainer = ({ selectionItems, ...props }) => {
+export const SelectionItemContainer = ({ ...props }) => {
   return (
     <StyledSelectionItemContainer {...props}></StyledSelectionItemContainer>
   );

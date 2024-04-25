@@ -17,7 +17,7 @@ import {
   Highlight,
 } from "./elements";
 
-export const Hero = ({ image, title, description, ctaText, ...props }) => {
+export const Hero = ({ image, title, description, ...props }) => {
   return (
     <StyledSectionContainer {...props}>
       <StyledContainer>
@@ -36,7 +36,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
             />
           </StyledImageContainer>
           <StyledSelectionItemContainer>
-            <StyledCard width="90%" backgroundColor="#f9f9f9">
+            <StyledCard width="90%" bgcolor="#f9f9f9">
               <StyledIconContainer>
                 <ion-icon
                   style={{ width: "40px", height: "40px" }}
@@ -54,7 +54,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 </StyledSectionParagraph>
               </StyledCardTextContainer>
             </StyledCard>
-            <StyledCard width="95%" backgroundColor="#f4f4f4">
+            <StyledCard width="95%" bgcolor="#f4f4f4">
               <StyledIconContainer>
                 <ion-icon
                   style={{ width: "40px", height: "40px" }}
@@ -72,7 +72,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
                 </StyledSectionParagraph>
               </StyledCardTextContainer>
             </StyledCard>
-            <StyledCard backgroundColor="#f1f1f1">
+            <StyledCard bgcolor="#f1f1f1">
               <StyledIconContainer>
                 <ion-icon
                   style={{ width: "40px", height: "40px" }}
@@ -95,22 +95,3 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
     </StyledSectionContainer>
   );
 };
-
-{
-  /* <StyledTextContainer>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
-        <StyledCTAContainer>
-          <StyledGetStartedBtn>{ctaText}</StyledGetStartedBtn>
-        </StyledCTAContainer>
-      </StyledTextContainer>
-      <StyledImageContainer>
-        <Image
-          layout="responsive"
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-        />
-      </StyledImageContainer> */
-}
