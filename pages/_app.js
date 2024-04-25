@@ -1,11 +1,16 @@
 import { ThemeProvider } from "styled-components";
 import { theme } from "~/styles";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Header } from "../sections/Header";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <ClerkProvider>
+      <ThemeProvider theme={theme}>
+        <Header />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ClerkProvider>
   );
 }
 

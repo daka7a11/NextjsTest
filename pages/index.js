@@ -20,6 +20,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+
       <Hero {...heroProps} />
       <Script
         type="module"
