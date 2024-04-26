@@ -22,4 +22,13 @@ export const StyledHeader = styled(({ ...props }) => <div {...props} />)`
     font-size: 1.2rem;
     margin-left: auto;
   }
+
+  .user-CTA {
+    font-size: 1.2rem;
+    margin-left: auto;
+  }
+
+  .user-CTA a {
+    margin: 0 0.4rem;
+  }
 `;

@@ -10,12 +10,6 @@ export const Header = ({ ...props }) => {
 
   return (
     <StyledHeader {...props}>
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
       <Link href="/">Home</Link>
       {userId ? (
         <>
@@ -27,6 +21,15 @@ export const Header = ({ ...props }) => {
       ) : (
         ""
       )}
+      <div className="user-CTA">
+        <SignedOut>
+          <Link href="/sign-in">Sign In</Link>
+          <Link href="/sign-up">Sign Up</Link>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
     </StyledHeader>
   );
 };

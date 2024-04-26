@@ -18,6 +18,7 @@ export const StyledSectionHeading = styled(
   font-size: 1.8rem;
   line-height: 4.375rem;
   font-weight: 600;
+  text-align: center;
 `;
 
 export const StyledSectionSubheading = styled(
